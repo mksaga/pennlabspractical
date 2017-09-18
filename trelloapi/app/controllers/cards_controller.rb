@@ -11,19 +11,22 @@ class CardsController < ApplicationController
   end
 
   def create
-    @card = Card.new(card_params)
+    @card = Card.create(card_params)
+
     if @card.save
-      flash[:success] = "Card created!"
-      redirect_to @card
+      redirect_to cards_path
     else
       render 'new'
     end
   end
 
+  def index
+    @cards = Card.all
+  end
   private
 
     def card_params
-      params.require(:card).permit(:title, :description)
+      params.require(:card).permit(:title, :description, :list_id)
     end
 
 end
