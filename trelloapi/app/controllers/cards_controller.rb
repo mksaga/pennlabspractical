@@ -9,12 +9,18 @@ class CardsController < ApplicationController
   end
 
   def create
-    @card = Card.new(params[:card])
+    @card = Card.new(card_params)
     if @card.save
       # handle successful save
     else
       render 'new'
     end
   end
-  
+
+  private
+
+    def card_params
+      params.require(:card).permit(:title, :description)
+    end
+
 end
