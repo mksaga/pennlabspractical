@@ -8,4 +8,13 @@ class CardsController < ApplicationController
     @card = Card.new
   end
 
+  def create
+    @card = Card.new(params[:card])
+    if @card.save
+      # handle successful save
+    else
+      render 'new'
+    end
+  end
+  
 end
