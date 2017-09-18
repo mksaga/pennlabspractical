@@ -20,10 +20,14 @@ class CardsController < ApplicationController
     end
   end
 
+  def index
+    @cards = Card.all
+  end
+
   private
 
     def card_params
-      params.require(:card).permit(:title, :description)
+      params.require(:card).permit(:title, :description, :list_id)
     end
 
 end
