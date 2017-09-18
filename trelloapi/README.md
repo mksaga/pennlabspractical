@@ -1,24 +1,7 @@
-# README
+# Mohamed Aly's TrelLoapi
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hey there! This is my submission for the **Trello API** assignment for the PennLabs back-end web development project.
 
-Things you may want to cover:
+This is a Rails project. The front end with the HTML form is the home page at `app/views/static_pages/home.html.erb`; the database that handles the storage is located in the `db/` directory.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Hoping to push this up to Heroku so it is accessible via the Web and not just on a machine with Rails installed.
