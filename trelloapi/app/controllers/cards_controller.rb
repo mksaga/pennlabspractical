@@ -11,7 +11,8 @@ class CardsController < ApplicationController
   end
 
   def create
-    @card = Card.new(card_params)
+    @list = List.find_by(card_params[:list_id])
+    @card = @list.cards.build(card_params)
     if @card.save
       flash[:success] = "Card created!"
       redirect_to @card
